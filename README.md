@@ -36,7 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  -
+  - Weet ik nog niet
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
