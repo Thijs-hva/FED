@@ -92,9 +92,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
-  Dingen die goed gaan:
+- ik loop nu op schema, en alles is overzichtelijk
 
-  Dingen die fout gaan:
+Wat minder goed gaat:
+- starten met css’en 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
