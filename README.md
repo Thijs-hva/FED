@@ -110,10 +110,14 @@ Wat minder goed gaat:
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+Home-pagina:
+  - Begin met mobile first, en begin hierbij op de nav
+  - Gebruik de desktop pagina als 'overig'
+  - Zoom op de foto's zijn een scale die je aanpast op de background-image
+
+Detail-pagina:
+- Voor de image size veranderen, gebruik je een optieveld in de slider
+
 
 </details>
 

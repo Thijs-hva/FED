@@ -1,0 +1,75 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+body {
+  background-color: yellow;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row;
+  padding: 1em;
+  list-style: none;
+}
+header button{
+  appearance:none;
+  background-color:black;
+  border:none;
+  z-index: 100;
+}
+
+header nav{
+  background-image: var(--header);
+  position: fixed;
+  top: 4em;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  translate: -100% 0;
+  transition: 2s;
+  background-color: yellowgreen;
+}
+
+header li{
+  list-style: none;
+  padding: 1em;
+  gap: 1em;
+}
+
+header a:nth-of-type(1){
+  list-style: none;
+  gap: 1em;
+}
+
+
+.open {
+  translate: 0 0;
+}
+
+
+/****************/
+/* JOUW STYLING Header */
+/****************/
