@@ -8,10 +8,8 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
-
-
-
 
 
 /*********************/
@@ -19,37 +17,91 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text1:#111;
+  --color-text2:#FFFFFF;
+	--color-background:#FFCE00;
+}
+/*********************/
+/* Lettertype */
+/*********************/
+
+@font-face {
+  font-family: "gotham-book";
+  src: url(../font/GothamRndSSm-Book_Web.woff2);
 }
 
-body {
-  background-color: yellow;
+@font-face {
+  font-family: "gotham-medium";
+  src: url(../font/GothamRndSSm-Medium_Web.woff2);
 }
+
+
+h1 {
+  clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+h2 {
+  font-family: "gotham-medium";
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+p {
+  font-family: "gotham-book";
+  font-size: 1rem;
+  line-height: 1.375;
+  font-weight: 400;
+  color: 	var(--color-text1);
+}
+
+a {
+  font-family: "gotham-book";
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: 	var(--color-text1);
+}
+
+
+/****************/
+/* JOUW STYLING Header */
+/****************/
+
+
 
 header {
   display: flex;
-  justify-content: space-between;
   flex-direction:row;
   padding: 1em;
   list-style: none;
+  gap: 1em;
 }
-header button{
+
+header > button{
   appearance:none;
   background-color:black;
   border:none;
   z-index: 100;
+  align-items: top;
+  background: url("../images/Header/open.svg");
+  background-repeat: no-repeat;
+  padding: 1.5em;
 }
 
 header nav{
-  background-image: var(--header);
   position: fixed;
-  top: 4em;
-  right: 0;
-  width: 100vw;
+  inset: 0;
+  padding-top: 5em;
+  /* width: 100vw; */
   height: 100vh;
-  translate: -100% 0;
-  transition: 2s;
+  translate: -100% 0%;
+  transition: 0.5s;
   background-color: yellowgreen;
 }
 
@@ -59,17 +111,103 @@ header li{
   gap: 1em;
 }
 
-header a:nth-of-type(1){
-  list-style: none;
-  gap: 1em;
+header li a span {
+	position:relative;
+	display:flex;
+	align-items:center;
 }
 
-
-.open {
-  translate: 0 0;
+li a span::before {
+	content:"";
+	position:absolute;
+	bottom: -0.5em;
+	background-color:var(--color-text1);
+	width:100%;
+	height: .15em;
+	scale:0 1;
+	transition:.3s;
+	transform-origin:left center;
 }
 
+li a:hover span::before {
+	scale:1 1;
+}
 
-/****************/
-/* JOUW STYLING Header */
-/****************/
+header > a:nth-of-type(1){
+  color: aquamarine;
+  margin-left: 2em;
+  margin-right: auto;
+  background: url("../images/Header/zoek.svg");
+  background-repeat: no-repeat;
+  padding: 1em;
+}
+
+header > a:nth-of-type(2){
+  background: url("../images/Header/logo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 2.5em 5em;
+}
+
+Header .open {
+  translate: 0% 0%;
+}
+
+Header .closeButton {
+  background: url("../images/Header/close.svg");
+  background-repeat: no-repeat;
+  padding: 5em;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+@media (width > 60em) {
+
+  body {
+    padding: 2em;
+  }
+  header > button {
+		display:none;
+	}
+	
+	header nav {
+		position:static;
+		translate:unset;
+		padding-top:0;
+    height: 0vh;
+    /* width: 100vw; */
+	}
+  
+  header nav ul li:nth-of-type(1){
+    display: none;
+  }
+	
+	header nav ul {
+		display:flex;
+		margin:0;
+		padding:0;
+		list-style:none;
+		gap: 2em;
+	}
+
+  header nav ul li {
+		padding: 0em;
+	}
+
+  header > a:nth-of-type(1){
+    color: aquamarine;
+    margin-left: 1em;
+    margin-right: auto;
+  }
+
+  header > a:nth-of-type(1){
+    padding: 1em;
+  }
+  
+  header > a:nth-of-type(2){
+    padding: 2.5em 5em;
+  }
+
+}

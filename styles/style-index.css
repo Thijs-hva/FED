@@ -6,42 +6,49 @@
 main {
 	padding: 1em;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: end;
 	flex-direction: column;
+	gap: 3em;
 }
 
-main p:nth-of-type(1) {
-	margin-top: 2em;
-	margin-bottom: 2em;
+
+/* 1ste section */
+
+main > section:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
 }
 
-main a:nth-of-type(1) {
-	margin-bottom: 1em;
+main > section:nth-of-type(1) > p:nth-of-type(1) {
+	gap: 2em;
 }
 
-main a:nth-of-type(2) {
-	margin-bottom: 7em;
+main > section:nth-of-type(1) > ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
 
-/* volgens mij kan dit beter!! */
 
-main ul {
+/* lijst blokken */
+
+main > ul {
 	display: grid;
-	flex-wrap: wrap;
 	justify-content: center;
 	gap: 3em;
 	list-style: none;
 }
 
-main ul li {
+main > ul li {
 	background-color: red;
 	width: 100%;
-    height: 35em; 
-	/* hoogte moet ook meeschalen */
+	aspect-ratio: 3/4;
 	border-radius: 1em;
 }
 
-main ul li a {
+main > ul li a {
 	height:100%;
 	text-decoration: none;
 	display: flex;
@@ -49,47 +56,155 @@ main ul li a {
 	flex-direction: column;
 }
 
-main ul li p {
+main > ul li p {
 	color: white;
 }
 
-main ul li h3 {
-	color: yellow;
+main > ul li h3 {
+	font-family: "gotham-medium";
+	color: var(--color-text2);
+	font-weight: 500;
 	order: 0;
 	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
 
-main ul li p:nth-of-type(1) {
+main > ul li p:nth-of-type(1) {
+	font-family: "gotham-book";
 	order: -1;
+	font-size: .875em;
+	line-height: 1.375;
+    font-weight: 400;
 }
 
-main ul li p:nth-of-type(3) {
+main > ul li p:nth-of-type(3) {
+	font-family: "gotham-book";
 	margin-top: 1em;
+	font-size: 1rem;
+    line-height: 1.375;
+    font-weight: 400;
 }
 
 
-main ul li:nth-of-type(1) a{
+main > ul li:nth-of-type(1) a{
 	/* background-color: aliceblue; */
 	padding: 1.25em;
-	background-image: url("../images/home/weiland.jpg");
+	background: url("../images/home/weiland.jpg");
 	border-radius: 1em;
 	background-size: cover;
 }
 
-main ul li:nth-of-type(2) a{
-	/* background-color: aliceblue; */
+main > ul li:nth-of-type(2) a{
 	padding: 1.25em;
-	background-image: url("../images/home/vanGogh.jpg");
+	background: url("../images/home/vanGogh.jpg");
 	border-radius: 1em;
 	background-size: cover;
 }
 
-main ul li:nth-of-type(3) a{
-	/* background-color: aliceblue; */
+main > ul li:nth-of-type(3) a{
 	padding: 1.25em;
-	background-image: url("../images/home/plantje.jpg");
+	background: url("../images/home/plantje.jpg");
 	border-radius: 1em;
 	background-size: cover;
+	background-color: black;
+	/* Werkt niet */
 }
+
+/* 2de section */
+
+main > section:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin-top: 2em;
+}
+
+main > section:nth-of-type(2) ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+main > section:nth-of-type(2) ul:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+}
+
+main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(2) a{
+	background: url("../images/sponsor/vrienden-loterij.jpg");
+	background-size: cover;
+	padding: 1.25em 5em;
+}
+
+main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(3) a{
+	background: url("../images/sponsor/asml.jpg");
+	background-size: cover;
+	padding: 1.25em 5em;
+}
+
+main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(4) a{
+	background-image: url("../images/sponsor/dhl.jpg");
+	background-size: cover;
+	padding: 1.25em 5em;
+}
+
+
+@media (width > 60em) and (height > 40em){
+
+	::-webkit-scrollbar {
+		display: none;
+	  }
+
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	main {
+		display: flex;
+		flex-direction: row;
+		gap: 8em;
+		overflow: scroll;
+		width:100%;
+		max-width:100%;
+		overscroll-behavior-x: contain;
+		justify-content: start;
+	}
+
+	main > section:nth-of-type(1) {
+		min-width: 40vw;
+		justify-content: center;
+	}
+
+	/* lijst blokken */
+
+	main > ul {
+		display: flex;
+		justify-content: start;
+	}
+
+	main > ul > li {
+		/* flex-shrink: 0; */
+		width:unset;
+		aspect-ratio: 1.8/3;
+		height: 70vh;
+		/* display: inline-block; */
+	}
+	
+	main > ul > li > a:hover {
+		/* scale: 1.2; */
+		/* Hoe scale je alleen de background image?? */
+	}
+
+	/* Section 2 */
+
+	main > section:nth-of-type(2) {
+		min-width: 45vw;
+		justify-content: center;
+		/* margin-right: ; */
+	}
+
+  }
