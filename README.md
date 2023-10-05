@@ -22,7 +22,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  surface plane
+  surface plane, uiteindelijk is het responsive geworden.
+  Misschien zelfs wel beide gedaan.
  
 </details>
 
