@@ -22,8 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  surface plane, uiteindelijk is het responsive geworden.
-  Misschien zelfs wel beide gedaan.
+  surface plane
  
 </details>
 
@@ -226,16 +225,19 @@ Dingen die ik nog moet verbeteren:
   ### Je uitkomst - karakteristiek screenshots:
   <img src="readme-images/karakteristiek1.jpg" width="375px" alt="uitomst opdracht 1">
   <img src="readme-images/karakteristiek2.jpg" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/karakteristiek3.jpg" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/karakteristiek4.jpg" width="375px" alt="uitomst opdracht 1">
 
 
 
 
   ### Dit ging goed/Heb ik geleerd: 
   - Het is me gelukt om de website responsive te maken, waarbij er een vertical scroll komt op de home-pagina:
+  <img src="readme-images/karakteristiek1.jpg" width="375px" alt="uitomst opdracht 1">
   <img src="readme-images/geleerd1A.jpg" width="375px" alt="top">
-  <img src="readme-images/geleerd1B.jpg" width="375px" alt="top">
+
+  - Het is me gelukt om doormiddel van een grid, een pagina responsive te maken:
+    <img src="readme-images/karakteristiek2.jpg" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/geleerd1B.jpg" width="375px" alt="top">
+
 
   - Het is me gelukt om een hover te plaatsen op verschillende elementen, zoals de plaatjes te animeren:
   <img src="readme-images/geleerd2.jpg" width="375px" alt="top">
@@ -248,8 +250,7 @@ Dingen die ik nog moet verbeteren:
   - Het is me niet gelukt om de background-color te veranderen, doormiddel van javascript.
   - Het is me niet gelukt om de filter te laten werken op de collectie pagina.
 
-  <img src="readme-images/geleerd1B.jpg" width="375px" alt="bummer">
-  <img src="readme-images/bummer2.jpg" width="375px" alt="bummer">
+  <img src="readme-images/bummer.jpg" width="375px" alt="bummer">
 </details>
 
 
