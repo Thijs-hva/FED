@@ -32,6 +32,28 @@ main > section:nth-of-type(1) > ul {
 }
 
 
+main > section:nth-of-type(1) > ul a{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+
+	transition: 0.3s;
+}
+
+main > section:nth-of-type(1) > ul a::before{
+	content: "";
+	display: block;
+	width: 1.5em;
+	aspect-ratio: 1;
+	background-image: url(../images/home/arrowBlack.svg);
+	background-size: cover;
+}
+
+main > section:nth-of-type(1) > ul a:hover{
+	gap: 1em;
+}
+
+
 /* lijst blokken */
 
 main > ul {
@@ -42,22 +64,31 @@ main > ul {
 }
 
 main > ul li {
-	background-color: red;
 	width: 100%;
 	aspect-ratio: 3/4;
 	border-radius: 1em;
 }
 
-main > ul li a {
+main > ul > li > a {
 	height:100%;
 	text-decoration: none;
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: column;
+
+	position:relative;
+	overflow:hidden;
+	padding: 1.25em;
+
+	border-radius: 1em;
+}
+
+main > ul > li > a > * {
+	position:relative;
 }
 
 main > ul li p {
-	color: white;
+	color: var(--color-text2);
 }
 
 main > ul li h3 {
@@ -79,37 +110,56 @@ main > ul li p:nth-of-type(1) {
 }
 
 main > ul li p:nth-of-type(3) {
-	font-family: "gotham-book";
+	font-family: "gotham-medium";
 	margin-top: 1em;
 	font-size: 1rem;
     line-height: 1.375;
-    font-weight: 400;
+    font-weight: 800;
+
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+
+	transition: 0.3s;
 }
 
-
-main > ul li:nth-of-type(1) a{
-	/* background-color: aliceblue; */
-	padding: 1.25em;
-	background: url("../images/home/weiland.jpg");
-	border-radius: 1em;
+main > ul li p:nth-of-type(3)::after {
+	content: "";
+	display: block;
+	width: 1.5em;
+	aspect-ratio: 1;
+	background-image: url(../images/home/arrowWhite.svg);
 	background-size: cover;
 }
 
-main > ul li:nth-of-type(2) a{
-	padding: 1.25em;
-	background: url("../images/home/vanGogh.jpg");
-	border-radius: 1em;
+main > ul li a::before {
+	content:"";
+	position: absolute;
+	inset:0;
+
 	background-size: cover;
+
+	transition: .8s;
+
 }
 
-main > ul li:nth-of-type(3) a{
-	padding: 1.25em;
-	background: url("../images/home/plantje.jpg");
-	border-radius: 1em;
-	background-size: cover;
-	background-color: black;
-	/* Werkt niet */
+main > ul li:nth-of-type(1) a::before{
+	background-image:url("../images/home/weiland.jpg");
 }
+
+main > ul li:nth-of-type(2) a::before{
+	background-image: url("../images/home/vanGogh.jpg");
+}
+
+main > ul li:nth-of-type(3) a::before{
+	background-image: url("../images/home/plantje.jpg");
+}
+
+
+main > ul li:hover a::before{
+	scale:1.1;
+}
+
 
 /* 2de section */
 
@@ -127,6 +177,27 @@ main > section:nth-of-type(2) ul {
 	gap: 1em;
 }
 
+main > section:nth-of-type(2) > ul:nth-of-type(1) a{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+
+	transition: 0.3s;
+}
+
+main > section:nth-of-type(2) > ul:nth-of-type(1) a::after{
+	content: "";
+	display: block;
+	width: 1.5em;
+	aspect-ratio: 1;
+	background-image: url(../images/home/arrowBlack.svg);
+	background-size: cover;
+}
+
+main > section:nth-of-type(2) > ul:nth-of-type(1) a:hover{
+	gap: 1em;
+}
+
 main > section:nth-of-type(2) ul:nth-of-type(2) {
 	display: flex;
 	flex-direction: column;
@@ -136,6 +207,7 @@ main > section:nth-of-type(2) ul:nth-of-type(2) {
 main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(2) a{
 	background: url("../images/sponsor/vrienden-loterij.jpg");
 	background-size: cover;
+	background-position: center;
 	padding: 1.25em 5em;
 }
 
@@ -150,6 +222,7 @@ main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(4) a{
 	background-size: cover;
 	padding: 1.25em 5em;
 }
+
 
 
 @media (width > 60em) and (height > 40em){
@@ -175,6 +248,7 @@ main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(4) a{
 	}
 
 	main > section:nth-of-type(1) {
+		width: 50%;
 		min-width: 40vw;
 		justify-content: center;
 	}
@@ -193,15 +267,11 @@ main > section:nth-of-type(2) ul:nth-of-type(2) li:nth-of-type(4) a{
 		height: 70vh;
 		/* display: inline-block; */
 	}
-	
-	main > ul > li > a:hover {
-		/* scale: 1.2; */
-		/* Hoe scale je alleen de background image?? */
-	}
 
 	/* Section 2 */
 
 	main > section:nth-of-type(2) {
+		width: 50%;
 		min-width: 45vw;
 		justify-content: center;
 		/* margin-right: ; */

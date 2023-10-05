@@ -1,3 +1,154 @@
 /****************/
 /* JOUW STYLING Detail */
-/****************?
+/****************?/
+
+/* Main */
+body {
+    background-color: var(--color-background2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+}
+
+/* 1ste section */
+
+main>section:nth-of-type(1) {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding-bottom: 1em;
+    border-bottom: solid 4px;
+}
+
+main>section:nth-of-type(1) form:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+main>section:nth-of-type(1) div {
+    display: none;
+}
+
+main>section:nth-of-type(1) form:nth-of-type(2) {
+    display: none;
+}
+
+/* De zoekbalk */
+main>section:nth-of-type(1) form:nth-of-type(1) input {
+    border: none;
+    background-color: transparent;
+    max-width: 100%;
+    font-size: 1.25rem;
+    font-family: "gotham-medium";
+    color: var(--color-text1);
+    font-weight: 500;
+}
+
+main>section:nth-of-type(1) form:nth-of-type(1) input::placeholder {
+    color: var(--color-text1);
+    opacity: 0.5;
+}
+
+main>section:nth-of-type(1) form:nth-of-type(1) input:focus {
+    color: var(--color-text1);
+}
+
+main>section:nth-of-type(1) form:nth-of-type(1) button {
+    background-image: url(../images/Header/zoek.svg);
+    background-size: cover;
+    height: 2.25em;
+    width: 2.25em;
+
+    border: none;
+    background-color: transparent;
+}
+
+/* 2de section */
+
+main>section:nth-of-type(2) ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 2.5em;
+    list-style: none;
+}
+
+main>section:nth-of-type(2) img {
+    max-width: 100%;
+    height: auto;
+
+    transition: 0.3s;
+}
+
+main>section:nth-of-type(2) img:hover {
+    scale: 1.2;
+}
+
+
+@media (width > 60em) and (height > 40em) {
+
+    /* 1ste section */
+
+    main>section:nth-of-type(1) div {
+        display: inline;
+    }
+
+    main>section:nth-of-type(1) form:nth-of-type(2) {
+        display: inline;
+    }
+
+    main>section:nth-of-type(1) form:nth-of-type(2) button:nth-of-type(1){
+        padding: 1.2em;
+
+        border: none;
+        background-color: transparent;
+        background-image: url(../images/collectie/grid.svg);
+        background-size: cover;
+    }
+
+    main>section:nth-of-type(1) form:nth-of-type(2) button:nth-of-type(2){
+        padding: 1.2em;
+
+        border: none;
+        background-color: transparent;
+        background-image: url(../images/collectie/square.svg);
+        background-size: cover;
+    }
+
+    main>section:nth-of-type(1) div:nth-of-type(1) a {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    main>section:nth-of-type(1) div:nth-of-type(1) a::after {
+        content: "";
+        display: block;
+        width: 1.5em;
+        aspect-ratio: 1;
+        background-image: url(../images/collectie/expand.svg);
+        background-size: cover;
+    }
+
+    /* main>section:nth-of-type(1) form:nth-of-type(2) input[type="range"] {
+        background-color: pink;
+    } */
+
+    input[type="range"] {
+        accent-color: var(--color-text1);
+        border-radius: 0px;
+    }
+
+    main>section:nth-of-type(1) form:nth-of-type(2){
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+}

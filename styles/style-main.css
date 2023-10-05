@@ -1,26 +1,3 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text1:#111;
-  --color-text2:#FFFFFF;
-	--color-background:#FFCE00;
-}
 /*********************/
 /* Lettertype */
 /*********************/
@@ -36,14 +13,52 @@
 }
 
 
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* startje */
+  --color-text1: #111;
+  --color-text2: #FFFFFF;
+  --color-background: #FFCE00;
+  --color-background2: #DDDDDD;
+  --color-border: #202124;
+}
+
+
+/*********************/
+/* Focus */
+/*********************/
+
+a:focus-visible {
+  outline: none;
+  border: solid 2px ;
+  padding: 1em;
+  border-color: var(--color-border);
+}
+
+
+
 h1 {
-  clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+  font-family: "gotham-medium";
+  font-size: 1.75rem;
+  font-weight: 400;
 }
 
 h2 {
@@ -57,7 +72,7 @@ p {
   font-size: 1rem;
   line-height: 1.375;
   font-weight: 400;
-  color: 	var(--color-text1);
+  color: var(--color-text1);
 }
 
 a {
@@ -65,7 +80,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: 	var(--color-text1);
+  color: var(--color-text1);
 }
 
 
@@ -77,63 +92,64 @@ a {
 
 header {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   padding: 1em;
   list-style: none;
   gap: 1em;
 }
 
-header > button{
-  appearance:none;
-  background-color:black;
-  border:none;
-  z-index: 100;
+header>button {
+  appearance: none;
+  background-color: var(--color-text1);
+  border: none;
   align-items: top;
   background: url("../images/Header/open.svg");
   background-repeat: no-repeat;
   padding: 1.5em;
+  z-index: 200;
 }
 
-header nav{
+header nav {
   position: fixed;
+  z-index: 100;
   inset: 0;
   padding-top: 5em;
   /* width: 100vw; */
   height: 100vh;
   translate: -100% 0%;
   transition: 0.5s;
-  background-color: yellowgreen;
+  background-color: var(--color-background);
 }
 
-header li{
+header li {
   list-style: none;
   padding: 1em;
   gap: 1em;
 }
 
 header li a span {
-	position:relative;
-	display:flex;
-	align-items:center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 li a span::before {
-	content:"";
-	position:absolute;
-	bottom: -0.5em;
-	background-color:var(--color-text1);
-	width:100%;
-	height: .15em;
-	scale:0 1;
-	transition:.3s;
-	transform-origin:left center;
+  content: "";
+  position: absolute;
+  bottom: -0.5em;
+  background-color: var(--color-text1);
+  width: 100%;
+  height: .15em;
+  scale: 0 1;
+  transition: .3s;
+  transform-origin: left center;
 }
 
 li a:hover span::before {
-	scale:1 1;
+  scale: 1 1;
 }
 
-header > a:nth-of-type(1){
+header>a:nth-of-type(1) {
   color: aquamarine;
   margin-left: 2em;
   margin-right: auto;
@@ -142,7 +158,7 @@ header > a:nth-of-type(1){
   padding: 1em;
 }
 
-header > a:nth-of-type(2){
+header>a:nth-of-type(2) {
   background: url("../images/Header/logo.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -163,50 +179,61 @@ body {
   background-color: var(--color-background);
 }
 
-@media (width > 60em) {
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (width > 60em) and (height > 40em) {
 
   body {
     padding: 2em;
   }
-  header > button {
-		display:none;
-	}
-	
-	header nav {
-		position:static;
-		translate:unset;
-		padding-top:0;
-    height: 0vh;
-    /* width: 100vw; */
-	}
-  
-  header nav ul li:nth-of-type(1){
+
+  header>button {
     display: none;
   }
-	
-	header nav ul {
-		display:flex;
-		margin:0;
-		padding:0;
-		list-style:none;
-		gap: 2em;
-	}
+
+  header nav {
+    position: static;
+    translate: unset;
+    padding-top: 0;
+    height: 0vh;
+    transition: none;
+    /* width: 100vw; */
+  }
+
+  header nav ul li:nth-of-type(1) {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 2em;
+  }
 
   header nav ul li {
-		padding: 0em;
-	}
+    padding: 0em;
+  }
 
-  header > a:nth-of-type(1){
-    color: aquamarine;
+  header>a:nth-of-type(1) {
     margin-left: 1em;
     margin-right: auto;
   }
 
-  header > a:nth-of-type(1){
+  header>a:nth-of-type(1) {
     padding: 1em;
   }
-  
-  header > a:nth-of-type(2){
+
+  header>a:nth-of-type(2) {
     padding: 2.5em 5em;
   }
 

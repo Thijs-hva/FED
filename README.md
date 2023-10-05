@@ -72,6 +72,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele pagina: 
   <img src="readme-images/breakdown-1.jpg" width="375px" alt="breakdown van de hele pagina">
 
+  ### de collectie pagina: 
+  <img src="readme-images/breakdown-4.jpg" width="375px" alt="breakdown van de hele pagina">
+
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/breakdown-2.jpg" width="375px" alt="breakdown van de hele pagina">
 
@@ -151,10 +154,8 @@ Wat minder goed gaat:
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Kijk naar hoe elton zijn span heeft gebruikt
+  - 
 
 </details>
 
@@ -168,7 +169,15 @@ Wat minder goed gaat:
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+Dingen die ik al heb verbeterd:
+- Elke pagina blok op de homepagina heeft nu een H, hiermee kan je er makkelijker door de pagina heen
+- De hierachies van de H's verbetert
+- Een 'hidden' h toegevoegd
+- samatische code gemaakt
+
+Dingen die ik nog moet verbeteren:
+- alt weghalen bij de pagina blokken
+- alt toevoegen bij de rest van de afbeeldingen
 
 </details>
 
@@ -188,20 +197,19 @@ Wat minder goed gaat:
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Elton          | Thijs              | student 3    | student 4        |
+  | ---            | -                  | ---          | ---              |
+  | Nth-child vraag| semantische code?  | en ik dit    | en dan ik dat    |
+  | Nav            | Javascript         | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - readme bijwerken
+  - verder gaan waar je mee bezig bent
+  - Gebruik voor je collectie pagina een grid
 
 </details>
 
@@ -215,19 +223,32 @@ Wat minder goed gaat:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/home.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek1.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek2.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek3.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek4.jpg" width="375px" alt="uitomst opdracht 1">
+
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  - Het is me gelukt om de website responsive te maken, waarbij er een vertical scroll komt op de home-pagina:
+  <img src="readme-images/geleerd1A.jpg" width="375px" alt="top">
+  <img src="readme-images/geleerd1B.jpg" width="375px" alt="top">
 
-  <img src="readme-images/detail.jpg" width="375px" alt="top">
+  - Het is me gelukt om een hover te plaatsen op verschillende elementen, zoals de plaatjes te animeren:
+  <img src="readme-images/geleerd2.jpg" width="375px" alt="top">
+
+ - Het is me gelukt om de website goed te laten werken met een screenreader:
+  <img src="readme-images/geleerd3.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  - Het is me niet gelukt om de background-color te veranderen, doormiddel van javascript.
+  - Het is me niet gelukt om de filter te laten werken op de collectie pagina.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/geleerd1B.jpg" width="375px" alt="bummer">
+  <img src="readme-images/bummer2.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -237,14 +258,22 @@ Wat minder goed gaat:
 ## Bronnenlijst
 
 <details open>
-  <summary>continu bijhouden terwijl je werkt</summary>
+  <summary>
+  bronnen:
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
+Website's:
+  1. W3schools, hulp bij het refreschen en bijwerken van mijn css kennis (https://www.w3schools.com)
+  2. Mdn, hulp bij het refreschen van mijn code (css+html) kennis (https://developer.mozilla.org/en-US/)
+  3. css-tricks, hulp bij het maken van css flexbox en grid (https://css-tricks.com/snippets/css/complete-guide-grid/)
+  4. chatgpt, hulp bij het oplossen van problemen javascript (https://chat.openai.com)
 
-  1. bron 1
-  2. bron 2
-  3. ...
+klasgenoten:
+  1. Elton, hulp bij de span animatie bij de navigatie.
+  2. David, Mentale hulp in het gehele process (https://github.com/bijldavid/FED).
+  3. Karlijn, hulp bij de focus state (css).
+  4. Ananda, hulp bij het maken van de nav.
+  
+  </summary>
+
 
 </details>
