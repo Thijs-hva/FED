@@ -46,7 +46,7 @@
 /* Focus */
 /*********************/
 
-a:focus-visible {
+main a:focus-visible {
   outline: none;
   border: solid 2px ;
   padding: 1em;
